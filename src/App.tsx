@@ -1,29 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Home } from './components/Home';
-import { NavbarMain } from './components/Navbar';
-import { Footer } from './components/Footer';
-import { OneLifeTime } from './components/OneLifeTime';
-import { Dashboard } from './components/Dashboard';
-import { Stakings } from './components/Stakings';
-import { Support } from './components/Support';
-import { TermsAndConditions } from './components/TermsAndConditions';
-import './style.css';
+import { Home } from './components/Home/Home';
+import { NavbarMain } from './components/Navbar/Navbar';
+import { TokenExchange } from './components/TokenExchange/TokenExchange';
+import { Transfer } from './components/Transfer/Transfer';
+
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavbarMain />
+       <NavbarMain />
+        
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/1lifetime" exact component={OneLifeTime} />
-          <Route path="/dashboard" exact component={Dashboard} />
-          <Route path="/stakings" component={Stakings} />
-          <Route path="/support" component={Support} />
-          <Route path="/terms" component={TermsAndConditions} />
+          <Route path="/token-exchange" exact component={TokenExchange} />
+          <Route path="/transfer" exact component={Transfer} />
         </Switch>
-        <Footer />
+ 
       </BrowserRouter>
     </div>
   );

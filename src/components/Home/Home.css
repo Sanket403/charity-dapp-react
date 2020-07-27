@@ -1,0 +1,73 @@
+.bridge-bgd{
+    background: linear-gradient( rgba(0, 0, 0, -0.4), rgba(0, 0, 0, 0.6) ), url(/images/background.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+   }
+
+   h1{
+       color: #ffffff;
+       text-align: center;
+   }
+   
+   h5{
+       color: #ffffff;
+       text-align: center;
+   }
+
+   .proceed-box-flex{
+       display: flex;
+       justify-content: center;
+       }
+
+       .inner-box{
+           display: block;
+       }
+
+button{
+    border-width: 0px;
+}
+
+a{
+    text-decoration: none;
+    text-underline-position: unset;
+}
+
+a:hover{
+    color: #000000 !important;
+}
+
+.prcd-btn{
+    background-color: #b95866;
+    color: #ffffff;
+    text-align: center;
+    border-color: #a7a7a7;
+    border-radius: 8px;
+    margin-bottom: 44px;
+    padding-left: 17px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.frst-link{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-left: 5px;
+
+}
+
+
+.wrapper-container{
+    padding-top: 12%;
+}
+
+.mrg-home{
+    margin-bottom: 15px;
+}
+
+.bunch-btn-flex{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,3 +1,36 @@
-.navbar-item {
-  padding: 0.5rem;
+.event-img{
+    width: 30px;
+    height: 25px;
+}
+
+.stat-img{
+    width: 22px;
+    margin-right: 6px;
+    height: 25px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.wallet-img{
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+}
+
+.asset-logo{
+    width: 96px;
+    height: 66px;
+}
+
+.btn-border.nav-link{
+    border-bottom: 2px solid #000;
+}
+
+.right-border.nav-link{
+    border-right: 2px solid #000;
+    margin-right: 22px;
 }
