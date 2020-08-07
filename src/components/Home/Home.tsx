@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import './Home.css'
+import './Home.css';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 
 type State = {
   bunchModal: boolean;
-
 };
 
-
 export class Home extends Component<State> {
-
   state: State = {
     bunchModal: false,
   };
@@ -18,9 +15,8 @@ export class Home extends Component<State> {
   handleClose = () => {
     this.setState({
       bunchModal: false,
-    })
-  }
-
+    });
+  };
 
   render() {
     return (
@@ -29,25 +25,29 @@ export class Home extends Component<State> {
           <div className="wrapper-container">
             <div className="container">
               <div className="row  align-items-center justify-content-center text-center">
+                <div className="col-lg-10 align-self-end">
+                  <h1 className="text-uppercase text-white font-weight-bold">
+                    Eraswap Token Bridge
+                  </h1>
+                  <div className="divider my-4"></div>
+                </div>
+                <div className="col-lg-8 align-self-baseline">
+                  <h5 className="mrg-home">
+                    Transfer Tokens between Ethereum's Main network, and Eraswap network
+                  </h5>
 
-                   <div className="col-lg-10 align-self-end">
-                        <h1 className="text-uppercase text-white font-weight-bold">Eraswap Token Bridge</h1>
-                        <div className="divider my-4"></div>
-                    </div>
-                    <div className="col-lg-8 align-self-baseline">
-                        <h5 className="mrg-home">
-                        Transfer Tokens between Ethereum's Main network, and Eraswap network
-                        </h5>
-                      
-                      
-                      <Link to="/token-exchange" className="btn btn-primary btn-xl js-scroll-trigger prcd-btn">
-                        Proceed to Token exchange
-                      </Link>
-                
-                    <button className="btn btn-primary btn-xl js-scroll-trigger prcd-btn">Proceed to Bunch Submission</button>
-                    </div>
-               
-                
+                  <Link
+                    to="/token-exchange"
+                    className="btn btn-primary btn-xl js-scroll-trigger prcd-btn"
+                  >
+                    Proceed to Token exchange
+                  </Link>
+
+                  <button className="btn btn-primary btn-xl js-scroll-trigger prcd-btn">
+                    Proceed to Bunch Submission
+                  </button>
+                </div>
+
                 {/* <div className="proceed-box-flex">
                   <div className="inner-box">
                     <div className="frst-link">
@@ -62,7 +62,7 @@ export class Home extends Component<State> {
             </div>
           </div>
         </div>
-     
+
         {/* Modal for proof */}
 
         <Modal
@@ -106,6 +106,5 @@ export class Home extends Component<State> {
         </Modal>
       </div>
     );
-
   }
 }

@@ -1,15 +1,15 @@
-.er-value2{
-    display: flex;
-    margin-bottom: 0px;
+.er-value2 {
+  display: flex;
+  margin-bottom: 0px;
 }
 
-.sm-exch-txt2{
-    color: #a7a7a7;
-    font-size: 14px;
-    margin-top: 5px;
-    margin-bottom: 0px;
+.sm-exch-txt2 {
+  color: #a7a7a7;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
-.exchange-box-wht.transfer-ht{
- height: 180px;
+.exchange-box-wht.transfer-ht {
+  height: 180px;
 }
