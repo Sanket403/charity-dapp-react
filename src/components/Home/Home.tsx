@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import './Home.css'
+import './Home.css';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 
 type State = {
   bunchModal: boolean;
-
 };
 
-
 export class Home extends Component<State> {
-
   state: State = {
     bunchModal: false,
   };
@@ -18,23 +15,49 @@ export class Home extends Component<State> {
   handleClose = () => {
     this.setState({
       bunchModal: false,
-    })
-  }
-
+    });
+  };
 
   render() {
     return (
       <div>
         <div className="bridge-bgd">
           <div className="wrapper-container">
-            <h1>Eraswap Token Bridge</h1>
-            <h5 className="mrg-home">Transfer Tokens between Ethereum's Main network, and Eraswap network</h5>
-            <div className="proceed-box-flex">
-              <div className="inner-box">
-                <div className="frst-link">
-                  <Link to="/token-exchange" className="prcd-btn">Proceed to Token exchange</Link>
+            <div className="container">
+              <div className="row  align-items-center justify-content-center text-center">
+                <div className="col-lg-10 align-self-end">
+                  <h1 className="text-uppercase text-white font-weight-bold">
+                    Eraswap Token Bridge
+                  </h1>
+                  <div className="divider my-4"></div>
                 </div>
-               <button  className="prcd-btn">Proceed to Bunch Submission</button>
+                <div className="col-lg-8 align-self-baseline">
+                  <h5 className="mrg-home">
+                    Transfer Tokens between Ethereum's Main network, and Eraswap network
+                  </h5>
+
+                  <Link
+                    to="/token-exchange"
+                    className="btn btn-primary btn-xl js-scroll-trigger prcd-btn"
+                  >
+                    Proceed to Token exchange
+                  </Link>
+
+                  <button className="btn btn-primary btn-xl js-scroll-trigger prcd-btn">
+                    Proceed to Bunch Submission
+                  </button>
+                </div>
+
+                {/* <div className="proceed-box-flex">
+                  <div className="inner-box">
+                    <div className="frst-link">
+                      <Link to="/token-exchange" className="prcd-btn">
+                        Proceed to Token exchange
+                      </Link>
+                    </div>
+                    <button className="prcd-btn">Proceed to Bunch Submission</button>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -42,30 +65,46 @@ export class Home extends Component<State> {
 
         {/* Modal for proof */}
 
-        <Modal show={this.state.bunchModal} onHide={this.handleClose} className="date-modal-container" >
-
-          <Modal.Body >
+        <Modal
+          show={this.state.bunchModal}
+          onHide={this.handleClose}
+          className="date-modal-container"
+        >
+          <Modal.Body>
             <div className="exchange-box-wht-modal">
               <div className="exchange-container">
-              <p className="prf-md-txt">Submit ESN bunch and get rewards </p>
-               <div className="bunch-btn-flex">
-               <div className="exc-btn-box">
-                  <button className="tr-pn-btn" onClick={() => this.setState({ bunchModal: false })}>Default</button>
+                <p className="prf-md-txt">Submit ESN bunch and get rewards </p>
+                <div className="bunch-btn-flex">
+                  <div className="exc-btn-box">
+                    <button
+                      className="tr-pn-btn"
+                      onClick={() => this.setState({ bunchModal: false })}
+                    >
+                      Default
+                    </button>
+                  </div>
+                  <div className="exc-btn-box">
+                    <button
+                      className="tr-pn-btn"
+                      onClick={() => this.setState({ bunchModal: false })}
+                    >
+                      Advance
+                    </button>
+                  </div>
                 </div>
                 <div className="exc-btn-box">
-                  <button className="tr-pn-btn" onClick={() => this.setState({ bunchModal: false })}>Advance</button>
-                </div>
-                 </div>
-                <div className="exc-btn-box">
-                  <button className="tr-pn-btn" onClick={() => this.setState({ bunchModal: false, depositModal: true })}>GENERATE BUNCH STRIVES</button>
+                  <button
+                    className="tr-pn-btn"
+                    onClick={() => this.setState({ bunchModal: false, depositModal: true })}
+                  >
+                    GENERATE BUNCH STRIVES
+                  </button>
                 </div>
               </div>
             </div>
           </Modal.Body>
         </Modal>
       </div>
-
     );
-
   }
 }
