@@ -9,7 +9,7 @@ export class NavbarMain extends Component {
       <div>
         <Navbar collapseOnSelect expand="lg" bg="white">
           <Navbar.Brand href="/">
-            <img className="asset-logo" src="./images/eralogo.png" />
+            <img className="asset-logo" src="./images/charitydapp.png" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

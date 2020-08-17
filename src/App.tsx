@@ -2,8 +2,15 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from './components/Home/Home';
 import { NavbarMain } from './components/Navbar/Navbar';
-import { TokenExchange } from './components/TokenExchange/TokenExchange';
-import { Transfer } from './components/Transfer/Transfer';
+import { Footer } from './components/Footer/Footer';
+import { Donate} from './Container/Donate/Donate';
+import { Participation} from './Container/Participation/Participation';
+import {PastCampagins} from './Container/Campaigns/PastCampagins';
+import {ActiveCampagins} from './Container/Campaigns/ActiveCampagins';
+
+
+
+
 
 function App() {
   return (
@@ -13,9 +20,12 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/token-exchange" exact component={TokenExchange} />
-          <Route path="/transfer" exact component={Transfer} />
+          <Route path="/donate" exact component={Donate} />
+          <Route path="/participation" exact component={Participation} />
+          <Route path="/pst-camp" exact component={PastCampagins} />
+          <Route path="/act-camp" exact component={ActiveCampagins} />
         </Switch>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
